@@ -1,19 +1,18 @@
 package com.ruchi.pojos.requestPOJO.vwo;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class VWOLoginRequest {
 
-    private String username;
+    @Expose
     private String password;
+    @SerializedName("recaptcha_response_field")
+    private String recaptchaResponseField;
+    @Expose
     private Boolean remember;
-    private String recaptcha_response_field;
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
+    @Expose
+    private String username;
 
     public String getPassword() {
         return password;
@@ -21,6 +20,14 @@ public class VWOLoginRequest {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getRecaptchaResponseField() {
+        return recaptchaResponseField;
+    }
+
+    public void setRecaptchaResponseField(String recaptchaResponseField) {
+        this.recaptchaResponseField = recaptchaResponseField;
     }
 
     public Boolean getRemember() {
@@ -31,11 +38,11 @@ public class VWOLoginRequest {
         this.remember = remember;
     }
 
-    public String getRecaptcha_response_field() {
-        return recaptcha_response_field;
+    public String getUsername() {
+        return username;
     }
 
-    public void setRecaptcha_response_field(String recaptcha_response_field) {
-        this.recaptcha_response_field = recaptcha_response_field;
+    public void setUsername(String username) {
+        this.username = username;
     }
 }
